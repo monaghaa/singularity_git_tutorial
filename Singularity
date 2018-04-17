@@ -1,5 +1,5 @@
 Bootstrap:docker  
-From:ubuntu:18.04
+From:ubuntu:latest
 
 %labels
 MAINTAINER Andy M
@@ -13,6 +13,7 @@ echo "This is run when you run the image!"
 exec /bin/bash /code/hello.sh "$@"  
 
 %post  
+apt-get update
 echo "This section is performed after you bootstrap to build the image."  
 mkdir -p /code  
 apt-get install -y vim nano 
