@@ -1,5 +1,5 @@
 Bootstrap:docker  
-From:ubuntu:18.04
+From:ubuntu
 
 %labels
 MAINTAINER Andy M
