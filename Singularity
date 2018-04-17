@@ -15,6 +15,6 @@ exec /bin/bash /code/hello.sh "$@"
 %post  
 echo "This section is performed after you bootstrap to build the image."  
 mkdir -p /code  
-apt-get install vim  
-echo "Hello World" >> /code/hello.sh
+apt-get install -y vim  
+echo "echo Hello World" >> /code/hello.sh
 chmod u+x /code/hello.sh  
