@@ -1,5 +1,5 @@
 Bootstrap:docker  
-From:ubuntu:latest  
+From:ubuntu:14.04
 
 %labels
 MAINTAINER Andy M
@@ -15,6 +15,6 @@ exec /bin/bash /code/hello.sh "$@"
 %post  
 echo "This section is performed after you bootstrap to build the image."  
 mkdir -p /code  
-apt-get install -y vim  
+apt-get install -y vim nano 
 echo "echo Hello World" >> /code/hello.sh
 chmod u+x /code/hello.sh  
