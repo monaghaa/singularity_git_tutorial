@@ -13,9 +13,9 @@ echo "This is run when you run the image!"
 exec /bin/bash /code/hello.sh "$@"  
 
 %post  
-apk update
 echo "This section is performed after you bootstrap to build the image."  
+apk update
 mkdir -p /code  
-apk add vim nano 
+apk add vim nano bash 
 echo "echo Hello World" >> /code/hello.sh
 chmod u+x /code/hello.sh  
