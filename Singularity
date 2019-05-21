@@ -1,5 +1,5 @@
 Bootstrap:docker  
-From:ubuntu:latest
+From:alpine:latest
 
 %labels
 MAINTAINER Andy M
@@ -13,9 +13,9 @@ echo "This is run when you run the image!"
 exec /bin/bash /code/hello.sh "$@"  
 
 %post  
-apt-get update
+apk update
 echo "This section is performed after you bootstrap to build the image."  
 mkdir -p /code  
-apt-get install -y vim nano 
+apk add vim nano 
 echo "echo Hello World" >> /code/hello.sh
 chmod u+x /code/hello.sh  
