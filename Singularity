@@ -9,7 +9,7 @@ HELLO_BASE=/code
 export HELLO_BASE
 
 %runscript
-echo "This is run when you run the image!" 
+echo "This script is executed when you 'singularity run' the image!" 
 exec /bin/sh /code/hello.sh "$@"  
 
 %post  
