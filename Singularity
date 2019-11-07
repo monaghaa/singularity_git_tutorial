@@ -10,7 +10,7 @@ export HELLO_BASE
 
 %runscript
 echo "This is run when you run the image!" 
-exec /bin/bash /code/hello.sh "$@"  
+exec /bin/sh /code/hello.sh "$@"  
 
 %post  
 echo "This section is performed after you bootstrap to build the image."  
